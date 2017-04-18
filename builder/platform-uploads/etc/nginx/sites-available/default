@@ -1,0 +1,20 @@
+# This file is referenced from https://github.com/A5hleyRich/wordpress-nginx
+# Define path to cache and memory zone. The memory zone should be unique.
+# keys_zone=fastcgi-cache.com:100m creates the memory zone and sets the maximum size in MBs.
+# inactive=60m will remove cached items that haven't been accessed for 60 minutes or more.
+#fastcgi_cache_path /sites/fastcgi-cache.com/cache levels=1:2 keys_zone=fastcgi-cache.com:100m inactive=60m;
+
+server {
+	# Ports to listen on
+	listen 80;
+	listen [::]:80;
+
+	# Path to document root
+	root /usr/share/nginx/html;
+
+	# File to be used as index
+	index index.php;
+
+
+}
+
