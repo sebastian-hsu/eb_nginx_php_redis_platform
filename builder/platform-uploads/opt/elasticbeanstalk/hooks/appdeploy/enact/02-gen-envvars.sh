@@ -10,12 +10,7 @@
 
 . /etc/PhpPlatform/platform.config
 
-if /opt/elasticbeanstalk/bin/download-source-bundle; then
-	rm -rf $STAGING_DIR
-	mkdir -p $STAGING_DIR
-	unzip -o -d $STAGING_DIR /opt/elasticbeanstalk/deploy/appsource/source_bundle
-	rm -rf $STAGING_DIR/.ebextensions
-else
-	echo "No application version available."
-fi
+mkdir -p $CONFIG_DIR
+rm -f $CONFIG_DIR/envvars.json
 
+$EB_DIR/bin/get-config optionsettings > $CONFIG_DIR/envvars.json

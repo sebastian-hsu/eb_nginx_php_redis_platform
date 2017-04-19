@@ -47,6 +47,8 @@ packer build wp_eb_nginx_customize.json
 - setup cloudwatch logs
 - http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customize-environment-resources-elasticache.html
 
+##
+- If you are cloning this project and you are using Windows, remember to set `git config --global core.autocrlf input` 
 
 ## ref
 - [Launch: AWS Elastic Beanstalk launches support for Custom Platforms](https://aws.amazon.com/cn/blogs/aws/launch-aws-elastic-beanstalk-launches-support-for-custom-platforms/)

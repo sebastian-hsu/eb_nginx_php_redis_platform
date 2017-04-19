@@ -6,16 +6,10 @@
 #
 #   or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
-#!/bin/bash
+#!/bin/bash -xe
 
 . /etc/PhpPlatform/platform.config
 
-if /opt/elasticbeanstalk/bin/download-source-bundle; then
-	rm -rf $STAGING_DIR
-	mkdir -p $STAGING_DIR
-	unzip -o -d $STAGING_DIR /opt/elasticbeanstalk/deploy/appsource/source_bundle
-	rm -rf $STAGING_DIR/.ebextensions
-else
-	echo "No application version available."
-fi
+rm -rf $LIVE_DIR
+mv $STAGING_DIR $LIVE_DIR
 

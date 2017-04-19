@@ -13,7 +13,7 @@
       "instance_type": "t2.medium",
       "ssh_username": "ubuntu",
       "ssh_pty": "true",
-      "ami_name": "PHP7.1/Nginx on Ubuntu Server 16.04 LTS",
+      "ami_name": "ubuntu/nginx/php7.1",
       "tags": {
         "eb_platform_name": "{{user `platform_name`}}",
         "eb_platform_version": "{{user `platform_version`}}",
