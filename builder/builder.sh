@@ -79,6 +79,8 @@ set_permissions() {
     chown -R root:root /opt/elasticbeanstalk/
     echo "Setting permissions for shell scripts"
     find /opt/elasticbeanstalk/ -name "*.sh" -exec chmod 755 {} \; -print
+    find /opt/elasticbeanstalk/ -name "export_envvars" -exec chmod 755 {} \; -print
+    find /opt/elasticbeanstalk/ -name "*.rb" -exec chmod 755 {} \; -print
     echo "setting permissions done."
 }
 

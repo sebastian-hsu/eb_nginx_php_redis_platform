@@ -1,17 +1,18 @@
 # Hosting WordPress on Elastic Beanstalk Reference from Delicious Brain
 
-This is reference from [this post](https://deliciousbrains.com/hosting-wordpress-2017-update/) in order to create a good performance environment.
+This is referenced from [this post](https://deliciousbrains.com/hosting-wordpress-2017-update/) in order to create a good performance environment.
 
-## Ubuntu
+## Environment build by this repo
+
+### Ubuntu
 -  Ubuntu 16.04: depends on where your region is, change **region** and **source_ami** in [wp_eb_nginx_customize.json](wp_eb_nginx_customize.json)
 
-## Nginx Settings
+### Nginx Settings
 - Use [mainline version](https://deliciousbrains.com/hosting-wordpress-yourself-nginx-php-mysql/)
 - [Difference between 2 branches](https://www.nginx.com/blog/nginx-1-6-1-7-released/)
 - Use [FastCGI caching](https://deliciousbrains.com/hosting-wordpress-yourself-server-monitoring-caching/#page-cache)
 
-## MariaDB
-- ref medium
+### MariaDB
 
 ## Software Requirement
 - [EB CLI 3.10.0 or later](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html)
