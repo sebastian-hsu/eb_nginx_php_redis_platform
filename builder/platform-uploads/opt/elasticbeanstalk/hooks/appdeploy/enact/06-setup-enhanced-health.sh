@@ -14,5 +14,5 @@ then
 	/opt/elasticbeanstalk/bin/healthd-track-pidfile --proxy nginx
 	/opt/elasticbeanstalk/bin/healthd-configure --appstat-log-path /var/log/nginx/healthd/application.log --appstat-uni sec --appstat-timestamp-on 'completion' 
 
-	RESTART_HEALTHD=''
+	/opt/elasticbeanstalk/bin/healthd-restart
 fi

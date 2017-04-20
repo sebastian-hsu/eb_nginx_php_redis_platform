@@ -10,13 +10,5 @@
 
 if [ -d /etc/healthd ]
 then
-	RESTART_HEALTHD=''
-
-	## restart healthd 
-	if [ ! -z "$RESTART_HEALTHD" ]; then
-		/opt/elasticbeanstalk/bin/healthd-restart
-	else
-		echo "Not restarting HealthD since no processes to track"
-		exit 1
-	fi
+	/opt/elasticbeanstalk/bin/healthd-restart
 fi
