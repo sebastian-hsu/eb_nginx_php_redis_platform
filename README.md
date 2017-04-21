@@ -6,6 +6,22 @@ This is referenced from [this post](https://deliciousbrains.com/hosting-wordpres
 
 ### Ubuntu
 -  Ubuntu 16.04: depends on where your region is, change **region** and **source_ami** in [wp_eb_nginx_customize.json](wp_eb_nginx_customize.json)
+| **Zone**       | **ID**       |
+|----------------|--------------|
+| sa-east-1      | ami-983d5ef4 |
+| eu-west-1      | ami-cf3708a9 |
+| ap-south-1     | ami-aa6714c5 |
+| us-east-2      | ami-f2e8cc97 |
+| us-west-2      | ami-817eeae1 |
+| us-east-1      | ami-5def554b |
+| ca-central-1   | ami-730bb617 |
+| eu-central-1   | ami-02a1716d |
+| ap-southeast-1 | ami-211ea242 |
+| ap-southeast-2 | ami-40353a23 |
+| ap-northeast-1 | ami-95d5f0f2 |
+| ap-northeast-2 | ami-8572a1eb |
+| eu-west-2      | ami-0d6f7b69 |
+| us-west-1      | ami-08e2b968 |
 
 ### Nginx Settings
 - Use [mainline version](https://deliciousbrains.com/hosting-wordpress-yourself-nginx-php-mysql/)
@@ -43,7 +59,7 @@ packer build wp_eb_nginx_customize.json
 - [WP Offload S3 Lite](https://wordpress.org/plugins/amazon-s3-and-cloudfront/)
 
 ## todo
-- set deploy to /usr/share/nginx/html 
+- vi /etc/php/7.1/fpm/php-fpm.conf
 - http2 alb
 - setup cloudwatch logs
 - http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customize-environment-resources-elasticache.html
