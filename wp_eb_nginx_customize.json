@@ -9,7 +9,7 @@
       "type": "amazon-ebs",
       "name": "HVM AMI builder",
       "region": "ap-southeast-1",
-      "source_ami": "ami-211ea242",
+      "source_ami": "ami-8fcc75ec",
       "instance_type": "t2.medium",
       "ssh_username": "ubuntu",
       "ssh_pty": "true",
