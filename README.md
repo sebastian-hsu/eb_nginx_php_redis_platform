@@ -6,7 +6,7 @@ This is referenced from [this post](https://deliciousbrains.com/hosting-wordpres
 
 ### Ubuntu
 -  Ubuntu 16.04: depends on where your region is, change **region** and **source_ami** in [wp_eb_nginx_customize.json](wp_eb_nginx_customize.json)
-| **Zone**       | **ID**       |
+| Zone           | ID           |
 |----------------|--------------|
 | sa-east-1      | ami-983d5ef4 |
 | eu-west-1      | ami-cf3708a9 |
