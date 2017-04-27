@@ -32,7 +32,8 @@
       "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo {{ .Path }}",
       "scripts": [
         "builder/builder.sh"
-      ]
+      ],
+      "skip_clean":true
     }
   ]
 }
