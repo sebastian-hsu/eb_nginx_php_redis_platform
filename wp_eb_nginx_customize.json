@@ -25,7 +25,8 @@
     {
       "type": "file",
       "source": "builder",
-      "destination": "/tmp/"
+      "destination": "/tmp/",
+      "skip_clean":true
     },
     {
       "type": "shell",
