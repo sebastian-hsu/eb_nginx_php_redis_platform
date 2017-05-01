@@ -25,16 +25,14 @@
     {
       "type": "file",
       "source": "builder",
-      "destination": "/tmp/",
-      "skip_clean":true
+      "destination": "/tmp/"
     },
     {
       "type": "shell",
       "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo {{ .Path }}",
       "scripts": [
         "builder/builder.sh"
-      ],
-      "skip_clean":true
+      ]
     }
   ]
 }
