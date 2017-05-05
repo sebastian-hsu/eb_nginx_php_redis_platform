@@ -5,24 +5,25 @@ This is referenced from [this post](https://deliciousbrains.com/hosting-wordpres
 ## Environment build by this repo
 
 ### Ubuntu
--  Ubuntu 16.04: depends on where your region is, change **region** and **source_ami** in [wp_eb_nginx_customize.json](wp_eb_nginx_customize.json)
-
+- Ubuntu 16.04: depends on where your region is, change **region** and **source_ami** in [wp_eb_nginx_customize.json](wp_eb_nginx_customize.json)
+- You can go to [https://cloud-images.ubuntu.com/locator/](https://cloud-images.ubuntu.com/locator/) to find the latest AMI in your region  
+- 
 | Zone           | ID           |
 |---|---|
-| sa-east-1      | ami-983d5ef4 |
-| eu-west-1      | ami-cf3708a9 |
-| ap-south-1     | ami-aa6714c5 |
-| us-east-2      | ami-f2e8cc97 |
-| us-west-2      | ami-817eeae1 |
-| us-east-1      | ami-5def554b |
-| ca-central-1   | ami-730bb617 |
-| eu-central-1   | ami-02a1716d |
-| ap-southeast-1 | ami-211ea242 |
-| ap-southeast-2 | ami-40353a23 |
-| ap-northeast-1 | ami-95d5f0f2 |
-| ap-northeast-2 | ami-8572a1eb |
-| eu-west-2      | ami-0d6f7b69 |
-| us-west-1      | ami-08e2b968 |
+| sa-east-1      | ami-4090f22c |
+| eu-west-1      | ami-a8d2d7ce |
+| ap-south-1     | ami-c2ee9dad |
+| us-east-2      | ami-618fab04 |
+| us-west-2      | ami-efd0428f |
+| us-east-1      | ami-80861296 |
+| ca-central-1   | ami-b3d965d7 |
+| eu-central-1   | ami-060cde69 |
+| ap-southeast-1 | ami-8fcc75ec |
+| ap-southeast-2 | ami-96666ff5 |
+| ap-northeast-1 | ami-afb09dc8 |
+| ap-northeast-2 | ami-66e33108 |
+| eu-west-2      | ami-f1d7c395 |
+| us-west-1      | ami-2afbde4a |
 
 ### Nginx Settings
 - Use [mainline version](https://deliciousbrains.com/hosting-wordpress-yourself-nginx-php-mysql/)
