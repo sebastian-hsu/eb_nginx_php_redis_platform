@@ -19,5 +19,6 @@ set -xe
 SUPPORT_PATH=/opt/elasticbeanstalk/support
 /opt/elasticbeanstalk/support/export_envvars
 ln -sf $SUPPORT_PATH/envvars /etc/profile.d/eb_envvars.sh
+. /opt/elasticbeanstalk/support/envvars
 service php7.1-fpm restart
 service nginx restart
