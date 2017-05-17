@@ -39,6 +39,7 @@ This is because new kernel version throws an interactive prompt while running "a
 I even put `export DEBIAN_FRONTEND=noninteractive` in shell script but it doesn't help.
 So please use the AMI release before 2017/03/29 at this moment.
 - You can go to [https://cloud-images.ubuntu.com/locator/](https://cloud-images.ubuntu.com/locator/) to find the latest AMI in your region by using following filters
+
 |Filter|Value|
 |:---:|:---:|
 |Cloud|Amazon AWS|
