@@ -13,4 +13,15 @@ if __FILE__ == $0
     end
     
     File.open(env_file, 'w') { |f| f.write(str) }
+
+    fastcgi_params_file = '/etc/nginx/fastcgi_params'
+    env_vars = get_env_vars
+
+    str = ''
+    env_vars.each do |key, value|
+        new_key = key.gsub(/\s/, '_')
+        str << "fastcgi_param #{new_key} \"#{value}\";\n"
+    end
+
+    File.open(fastcgi_params_file, 'a') { |f| f.write(str) }
 end
