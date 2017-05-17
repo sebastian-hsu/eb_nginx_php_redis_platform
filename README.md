@@ -1,6 +1,6 @@
-# Hosting WordPress on Elastic Beanstalk Reference from Delicious Brain
+# Hosting WordPress on Elastic Beanstalk using Ubuntu/PHP/Nginx
 
-This is referenced from [this post](https://deliciousbrains.com/hosting-wordpress-2017-update/) in order to create a good performance environment.
+This is referenced from [Delicious Brain post](https://deliciousbrains.com/hosting-wordpress-2017-update/) in order to create a good performance WordPress environment.
 
 ## Environment build by this repo
 
@@ -9,13 +9,15 @@ This is referenced from [this post](https://deliciousbrains.com/hosting-wordpres
 - **Please use the AMI release BEFORE 2017/03/29** due to Ubuntu issue (I have issued a ticket and this is what support said)
 - You can go to [https://cloud-images.ubuntu.com/locator/](https://cloud-images.ubuntu.com/locator/) to find the latest AMI in your region by using following filters
 
-> Cloud: Amazon AWS
-> Zone: [choose your region]
-> Name: xenial
-> Version: 16.04
-> Arch: amd64
-> Instance Type: hvm-ssd
-> Release: [choose the one before 20170329]
+|Filter|Value|
+|:---:|:---:|
+|Cloud|Amazon AWS|
+|Zone|[choose your region]|
+|Name|xenial|
+|Version|16.04|
+|Arch|amd64|
+|Instance Type|hvm-ssd|
+|Release|[choose the one before 20170329]|
 
 ### Nginx Settings
 - Use [mainline version](https://deliciousbrains.com/hosting-wordpress-yourself-nginx-php-mysql/)
