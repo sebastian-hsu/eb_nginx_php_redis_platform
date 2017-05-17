@@ -2,9 +2,21 @@
 
 This is referenced from [Delicious Brain post](https://deliciousbrains.com/hosting-wordpress-2017-update/) in order to create a good performance WordPress environment.
 
+## Howto
+
+### Config wp_eb_nginx_customize.json **builders** section
+- region: your aws region
+- source_ami: check [Ubuntu](#Ubuntu) section to choose your AMI 
+
+### EB command
+```
+eb platform init
+eb platform create
+```
+
 ## Environment build by this repo
 
-### Ubuntu
+### Ubuntu<a name="Ubuntu"></a>
 - Ubuntu 16.04: depends on where your region is, change **region** and **source_ami** in [wp_eb_nginx_customize.json](wp_eb_nginx_customize.json)
 - **Please use the AMI release BEFORE 2017/03/29** due to Ubuntu issue (I have issued a ticket and this is what support said)
 - You can go to [https://cloud-images.ubuntu.com/locator/](https://cloud-images.ubuntu.com/locator/) to find the latest AMI in your region by using following filters
@@ -29,16 +41,6 @@ This is referenced from [Delicious Brain post](https://deliciousbrains.com/hosti
 ## Software Requirement
 - [EB CLI 3.10.0 or later](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html)
 - [Packer](https://www.packer.io/)
-
-## steps
-
-### change wp_eb_nginx_customize.json
-
-### EB command
-```
-eb platform init
-eb platform create
-```
 
 ## Packer builders with debugging on Windows under PowerShell
 ```
@@ -65,52 +67,5 @@ packer build wp_eb_nginx_customize.json
 
 ## ref
 - [Launch: AWS Elastic Beanstalk launches support for Custom Platforms](https://aws.amazon.com/cn/blogs/aws/launch-aws-elastic-beanstalk-launches-support-for-custom-platforms/)
-- [Ubuntu on AWS gets serious performance boost with AWS-tuned kernel](https://insights.ubuntu.com/2017/04/05/ubuntu-on-aws-gets-serious-performance-boost-with-aws-tuned-kernel/)
-
-```json
-{
-    "Images": [
-        {
-            "VirtualizationType": "hvm",
-            "Name": "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20170329",
-            "Hypervisor": "xen",
-            "EnaSupport": true,
-            "SriovNetSupport": "simple",
-            "ImageId": "ami-211ea242",
-            "State": "available",
-            "BlockDeviceMappings": [
-                {
-                    "DeviceName": "/dev/sda1",
-                    "Ebs": {
-                        "DeleteOnTermination": true,
-                        "SnapshotId": "snap-01fe28f553bfdf538",
-                        "VolumeSize": 8,
-                        "VolumeType": "gp2",
-                        "Encrypted": false
-                    }
-                },
-                {
-                    "DeviceName": "/dev/sdb",
-                    "VirtualName": "ephemeral0"
-                },
-                {
-                    "DeviceName": "/dev/sdc",
-                    "VirtualName": "ephemeral1"
-                }
-            ],
-            "Architecture": "x86_64",
-            "ImageLocation": "099720109477/ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20170329",
-            "RootDeviceType": "ebs",
-            "OwnerId": "099720109477",
-            "RootDeviceName": "/dev/sda1",
-            "CreationDate": "2017-03-30T18:33:52.000Z",
-            "Public": true,
-            "ImageType": "machine",
-            "Description": "Canonical, Ubuntu, 16.04 LTS, amd64 xenial image build on 2017-03-29"
-        }
-    ]
-}
-```
-
 - [Using Locust on AWS Elastic Beanstalk for Distributed Load Generation and Testing](https://aws.amazon.com/blogs/devops/using-locust-on-aws-elastic-beanstalk-for-distributed-load-generation-and-testing/)
 - [AWS Elastic Beanstalk Load Generator Example](https://github.com/awslabs/eb-locustio-sample)
