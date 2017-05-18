@@ -1,7 +1,7 @@
 # Hosting WordPress on Elastic Beanstalk using Ubuntu/PHP/Nginx
 
 This is referenced from [Delicious Brain post](https://deliciousbrains.com/hosting-wordpress-2017-update/) in order to create a good performance WordPress environment. 
-I am not a Ubuntu/Nginx expert, any feedback will be very appreciated.
+This project is revised from [AWS Sample NodePlatform_Ubuntu.zip](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html#custom-platforms-sample), I am not a Ubuntu/Nginx expert, any feedback will be very appreciated.
 
 ## Howto
 
@@ -76,9 +76,8 @@ packer build wp_eb_nginx_customize.json
 - [WP Offload S3 Lite](https://wordpress.org/plugins/amazon-s3-and-cloudfront/)
 
 ## todo
-- vi /etc/php/7.1/fpm/php-fpm.conf
-- http2 alb
 - setup cloudwatch logs
+- http2 alb
 - http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customize-environment-resources-elasticache.html
 
 ##
