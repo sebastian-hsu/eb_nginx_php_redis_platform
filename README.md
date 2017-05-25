@@ -57,37 +57,9 @@ So please use the AMI release before 2017/03/29 at this moment.
 
 ### MariaDB
 
-## Start wordpress
-You have to create the environment by using EB CLI under dir `/wordpress`
-```
+## Start Your WordPress
+Please go to [https://github.com/sebastian-hsu/wordpress_eb_nginx_php_redis_platform](https://github.com/sebastian-hsu/wordpress_eb_nginx_php_redis_platform)
 
-```
-
-There are some `.ebextensions` settings as below.  
-### Cloudwatch Logs (remember to add IAM settings)
-In this repo, I extend existing log streams and add nginx_logs, you can find in [nginx_logs.config](wordpress/.ebextensions/nginx_logs.config)
-> Be sure to have proper [CloudWatch Log IAM permission](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.cloudwatchlogs.html) in your instance role which you can find under [**Configuration**] > [**Instance**] > [**Server**] > [**Instance profile**]
-### ALB (remember to add IAM settings)
-I add ALB settings, you can modify base on your situation
-> Be sure to have proper [ALB permission](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-applicationloadbalancer.html) in your instance role which you can find under [**Configuration**] > [**Instance**] > [**Server**] > [**Instance profile**]
-- [application-load-balancer.config](wordpress/.ebextensions/application-load-balancer.config)
-- [alb-default-process.config](wordpress/.ebextensions/alb-default-process.config)
-
-
-## HTTP2 supported
-
-## You should install the following plugins to get boost of this nginx settings
-- [Redis Object Cache](https://wordpress.org/plugins/redis-cache/)
-- [Amazon Web Service](https://wordpress.org/plugins/amazon-web-services/)
-- [WP Offload S3 Lite](https://wordpress.org/plugins/amazon-s3-and-cloudfront/)
-
-## todo
-- http2 alb
-- http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customize-environment-resources-elasticache.html
-
-##
-- If you are cloning this project and you are using Windows, remember to set `git config --global core.autocrlf input` 
-
-## ref
+## References
 - [Using Locust on AWS Elastic Beanstalk for Distributed Load Generation and Testing](https://aws.amazon.com/blogs/devops/using-locust-on-aws-elastic-beanstalk-for-distributed-load-generation-and-testing/)
 - [AWS Elastic Beanstalk Load Generator Example](https://github.com/awslabs/eb-locustio-sample)
