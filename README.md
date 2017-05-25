@@ -27,7 +27,7 @@ eb platform create
 https://cloud.githubusercontent.com/assets/6972644/26134175/4debf3ac-3adf-11e7-9499-5a080cf5cad6.png
 - The ability to create an environment with an already created custom platform is only available for the [new environment wizard](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-create-wizard.html).
 
-## Environment build by this repo
+## Environment built by this repo
 
 ### Ubuntu<a name="Ubuntu"></a>
 - Ubuntu 16.04: depends on where your region is, change **region** and **source_ami** in [wp_eb_nginx_customize.json](wp_eb_nginx_customize.json)
@@ -57,16 +57,9 @@ So please use the AMI release before 2017/03/29 at this moment.
 
 ### MariaDB
 
-## Software Requirement
-- [EB CLI 3.10.0 or later](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html)
-- [Packer](https://www.packer.io/)
-
-## Packer builders with debugging on Windows under PowerShell
-```
-$env:PACKER_LOG=1
-$env:PACKER_LOG_PATH="packerlog.txt"
-packer build wp_eb_nginx_customize.json
-```
+## Start wordpress
+- cloudwatch logs (remember to add iam settings)
+> Be sure to have proper [CloudWatch Log permission](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.cloudwatchlogs.html) in your instance role which you can find under [**Configuration**] > [**Instance**] > [**Server**] > [**Instance profile**]
 
 ## HTTP2 supported
 
