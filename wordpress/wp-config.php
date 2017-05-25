@@ -80,6 +80,7 @@ $table_prefix  = 'wp_';
 define('WP_DEBUG', false);
 define('WP_SITEURL', 'http://'.$_SERVER['HTTP_HOST'].'/');
 define('WP_HOE', 'http://'.$_SERVER['HTTP_HOST'].'/');
+define('DISALLOW_FILE_MODS',true);
 
 /* That's all, stop editing! Happy blogging. */
 
