@@ -58,7 +58,7 @@ So please use the AMI release before 2017/03/29 at this moment.
 ### MariaDB
 
 ## Start Your WordPress
-Please go to [https://github.com/sebastian-hsu/wordpress_eb_nginx_php_redis_platform](https://github.com/sebastian-hsu/wordpress_eb_nginx_php_redis_platform)
+Please go to [https://github.com/sebastian-hsu/wordpress_eb_ubuntu_nginx_php_platform](https://github.com/sebastian-hsu/wordpress_eb_ubuntu_nginx_php_platform)
 
 ## References
 - [Using Locust on AWS Elastic Beanstalk for Distributed Load Generation and Testing](https://aws.amazon.com/blogs/devops/using-locust-on-aws-elastic-beanstalk-for-distributed-load-generation-and-testing/)
