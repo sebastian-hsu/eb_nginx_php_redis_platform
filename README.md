@@ -58,8 +58,21 @@ So please use the AMI release before 2017/03/29 at this moment.
 ### MariaDB
 
 ## Start wordpress
-- cloudwatch logs (remember to add iam settings)
-> Be sure to have proper [CloudWatch Log permission](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.cloudwatchlogs.html) in your instance role which you can find under [**Configuration**] > [**Instance**] > [**Server**] > [**Instance profile**]
+You have to create the environment by using EB CLI under dir `/wordpress`
+```
+
+```
+
+There are some `.ebextensions` settings as below.  
+### Cloudwatch Logs (remember to add IAM settings)
+In this repo, I extend existing log streams and add nginx_logs, you can find in [nginx_logs.config](wordpress/.ebextensions/nginx_logs.config)
+> Be sure to have proper [CloudWatch Log IAM permission](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.cloudwatchlogs.html) in your instance role which you can find under [**Configuration**] > [**Instance**] > [**Server**] > [**Instance profile**]
+### ALB (remember to add IAM settings)
+I add ALB settings, you can modify base on your situation
+> Be sure to have proper [ALB permission](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-applicationloadbalancer.html) in your instance role which you can find under [**Configuration**] > [**Instance**] > [**Server**] > [**Instance profile**]
+- [application-load-balancer.config](wordpress/.ebextensions/application-load-balancer.config)
+- [alb-default-process.config](wordpress/.ebextensions/alb-default-process.config)
+
 
 ## HTTP2 supported
 
@@ -69,7 +82,6 @@ So please use the AMI release before 2017/03/29 at this moment.
 - [WP Offload S3 Lite](https://wordpress.org/plugins/amazon-s3-and-cloudfront/)
 
 ## todo
-- setup cloudwatch logs
 - http2 alb
 - http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customize-environment-resources-elasticache.html
 
