@@ -9,3 +9,4 @@
 #!/bin/bash -xe
 
 chown www-data.www-data /var/log/nginx/healthd/
+chown webapp.webapp /usr/share/nginx/html/
