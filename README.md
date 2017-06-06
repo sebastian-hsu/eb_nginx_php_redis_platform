@@ -22,10 +22,6 @@ eb platform create
 ```
 - More information can ref to [Launch: AWS Elastic Beanstalk launches support for Custom Platforms](https://aws.amazon.com/blogs/aws/launch-aws-elastic-beanstalk-launches-support-for-custom-platforms/)
 
-### Create Elastic Beanstalk WordPress Application
-- The ability to create an environment with an already created custom platform is only available for the [new environment wizard](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-create-wizard.html).
-![Optin](https://cloud.githubusercontent.com/assets/6972644/26134175/4debf3ac-3adf-11e7-9499-5a080cf5cad6.png)
-
 ## Environment built by this repo
 
 ### Ubuntu 16.04<a name="Ubuntu"></a>
