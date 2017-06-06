@@ -1,6 +1,6 @@
 # Hosting WordPress on Elastic Beanstalk using Ubuntu/PHP/Nginx
 
-This is referenced from [Delicious Brain post](https://deliciousbrains.com/hosting-wordpress-2017-update/) in order to create a good performance WordPress environment. 
+This repo is referenced from a [post from Delicious Brain](https://deliciousbrains.com/hosting-wordpress-2017-update/) in order to create a good performance WordPress environment. 
 This project is revised from [AWS Sample NodePlatform_Ubuntu.zip](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html#custom-platforms-sample), I am not a Ubuntu/Nginx expert, any feedback will be very appreciated.
 
 ## Howto
@@ -29,8 +29,8 @@ https://cloud.githubusercontent.com/assets/6972644/26134175/4debf3ac-3adf-11e7-9
 
 ## Environment built by this repo
 
-### Ubuntu<a name="Ubuntu"></a>
-- Ubuntu 16.04: depends on where your region is, change **region** and **source_ami** in [wp_eb_nginx_customize.json](wp_eb_nginx_customize.json)
+### Ubuntu 16.04<a name="Ubuntu"></a>
+- Depends on where your region is, change **region** and **source_ami** in [wp_eb_nginx_customize.json](wp_eb_nginx_customize.json)
 - **Please use the AMI release BEFORE 2017/03/29** due to Ubuntu issue,  the issue is with the kernel version "vmlinuz-4.4.0-72-generic".
 Beanstalk environment builder generates a second version of "wp_eb_nginx_customize.json" configuration file named "eb-packer.json" by appending a command to run "eb-bootstrap.sh" on the base instance for the AMI. 
 This "eb-bootstrap.sh" bootstraps the AMI with the Beanstalk gems, tarballs etc. 
@@ -50,16 +50,18 @@ So please use the AMI release before 2017/03/29 at this moment.
 |Instance Type|hvm-ssd|
 |Release|[choose the one before 20170329]|
 
-### Nginx Settings
+### Nginx
 - Use [mainline version](https://deliciousbrains.com/hosting-wordpress-yourself-nginx-php-mysql/)
 - [Difference between 2 branches](https://www.nginx.com/blog/nginx-1-6-1-7-released/)
 - Use [FastCGI caching](https://deliciousbrains.com/hosting-wordpress-yourself-server-monitoring-caching/#page-cache)
 
-### MariaDB
+### PHP 7.1
+- This PHP is maintained by [Ondřej Surý](https://launchpad.net/~ondrej/+archive/ubuntu/php)
 
 ## Start Your WordPress
 Please go to [https://github.com/sebastian-hsu/wordpress_eb_ubuntu_nginx_php_redis_platform](https://github.com/sebastian-hsu/wordpress_eb_ubuntu_nginx_php_redis_platform)
 
 ## References
-- [Using Locust on AWS Elastic Beanstalk for Distributed Load Generation and Testing](https://aws.amazon.com/blogs/devops/using-locust-on-aws-elastic-beanstalk-for-distributed-load-generation-and-testing/)
-- [AWS Elastic Beanstalk Load Generator Example](https://github.com/awslabs/eb-locustio-sample)
+- [Hosting WordPress Yourself 2017 Update](https://deliciousbrains.com/hosting-wordpress-2017-update/)
+- [AWS Elastic Beanstalk Supports Custom Platforms](https://aws.amazon.com/tw/about-aws/whats-new/2017/02/aws-elastic-beanstalk-supports-custom-platforms/)
+- [Launch: AWS Elastic Beanstalk launches support for Custom Platforms](https://aws.amazon.com/tw/blogs/aws/launch-aws-elastic-beanstalk-launches-support-for-custom-platforms/)
